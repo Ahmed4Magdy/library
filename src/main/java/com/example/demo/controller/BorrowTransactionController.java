@@ -38,4 +38,14 @@ public class BorrowTransactionController {
 
 
     }
+
+
+    @GetMapping("/{id}")
+    public Optional<BorrowTransaction> findByIdBorrowTransaction(@PathVariable Long id) {
+
+        return borrowTransactionService.findByIdBorrowTransaction(id);
+
+    }
+
+
 }

@@ -52,7 +52,6 @@ public class BorrowTransactionService {
     }
 
 
-
     public BorrowTransaction updateBorrowTransaction(Long id, BorrowTransaction borrow) {
 
         Optional<BorrowTransaction> existborrowtransactio = transactionRepository.findById(id);
@@ -76,8 +75,11 @@ public class BorrowTransactionService {
     }
 
 
+    public Optional<BorrowTransaction> findByIdBorrowTransaction(Long id) {
 
+        return transactionRepository.findById(id);
 
+    }
 
 
 }
